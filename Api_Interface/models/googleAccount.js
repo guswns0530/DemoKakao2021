@@ -38,5 +38,10 @@ module.exports = class GoogleAccount extends Sequelize.Model {
     )
   }
 
-  static associate(db) {}
+  static associate(db) {
+    db.GoogleAccount.hasOne(db.User, {
+      foreignKey: 'googleId',
+      sourceKey: 'id',
+    })
+  }
 }
