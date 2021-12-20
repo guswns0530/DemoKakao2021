@@ -1,0 +1,38 @@
+[
+    {
+        "userId": "0",
+        "name": "java",
+        "message": "★★★★☆",
+        "image": "/image/java.png"
+    },
+    {
+        "userId": "1",
+        "name": "PHP",
+        "message": "★★★☆☆",
+        "image": "/image/php.png"
+    },
+    {
+        "userId": "2",
+        "name": "JSP&Servlet",
+        "message": "★★★☆☆",
+        "image": "/image/jsp.png"
+    },
+    {
+        "userId": "4",
+        "name": "HTML/CSS",
+        "message": "★★★☆☆",
+        "image": "/image/html.png"
+    },
+    {
+        "userId": "5",
+        "name": "ES6",
+        "message": "★★★★★",
+        "image": "/image/js.png"
+    },
+    {
+        "userId": "6",
+        "name": "NODEJS",
+        "message": "★★★★☆",
+        "image": "/image/node.png"
+    }
+]

@@ -1,0 +1,1 @@
+exports.UserDAO = require('./UserDAO')

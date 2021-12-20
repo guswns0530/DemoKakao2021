@@ -1,16 +1,24 @@
 module.exports = {
   development: {
     db: {
+      user: 'root',
       username: 'root',
       password: null,
       database: 'demokakao2021',
       host: 'localhost',
       dialect: 'mysql',
+      omitNull: false,
+      logging: false,
     },
-    googleAPI: {
-      clientId:
-        '109262611672-sslq20bpg5lto3le0ujt9sr416qcgk3n.apps.googleusercontent.com',
-      clientSecurityPass: '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',
+    passport: {
+      kakao: {
+        clientID: 'cbc7dd85f37b273bf3e33e757a709bbd',
+        clientSecret: '',
+        callbackURL: 'http://localhost:3000/auth/kakao/callback',
+      },
+    },
+    session: {
+      secret: 'demokakao1234',
     },
   },
 }
