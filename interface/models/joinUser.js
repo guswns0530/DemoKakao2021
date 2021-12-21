@@ -7,9 +7,8 @@ module.exports = class JoinUser extends Sequelize.Model {
         joinId: {
           type: Sequelize.INTEGER,
           primaryKey: true,
-          allowNull: false,
-          field: 'join_id',
           autoIncrement: true,
+          field: 'join_id',
         },
         userId: {
           type: Sequelize.STRING(255),
@@ -17,7 +16,7 @@ module.exports = class JoinUser extends Sequelize.Model {
           field: 'user_id',
         },
         roomId: {
-          type: Sequelize.STRING(200),
+          type: Sequelize.INTEGER,
           allowNull: false,
           field: 'room_id',
         },

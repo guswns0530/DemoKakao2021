@@ -49,5 +49,5 @@ module.exports = class {
   //   await dao.addFriend('admin1', 'admin2')
 
   //   console.log(await dao.getFriend(4))
-  console.log((await dao.getFriendAll('admin1'))[0].dataValues)
+  console.log((await dao.getFriendAll('admin1')))
 })()
