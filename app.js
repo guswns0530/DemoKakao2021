@@ -42,48 +42,17 @@ app.use(passport.session())
 
 app.use('/', indexRouter)
 
-// sequelize
-//   .sync({ force: false })
-//   .then(async () => {
-//     console.log('DB Connect')
-//   })
-//   .catch((err) => {
-//     console.log(err)
-//   })
+sequelize
+  .sync({ force: true })
+  .then(async () => {
+    console.log('DB Connect')
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
 const server = app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번으로 실행중')
 })
 
-;(async () => {
-  const db = require('./interface/models')
-
-  console.log('----------------DB TEST------------------')
-
-  const result = await db.Room.findAll({
-    include: [
-      {
-        model: db.JoinUser,
-        where: {
-          user_id: 'admin',
-        },
-      },
-    ],
-  })
-
-  const result2 = await db.JoinUser.findAll({
-    include: [
-      {
-        model: db.Room,
-      },
-    ],
-    where: {
-      user_id: 'admin',
-    },
-  })
-
-  // console.log(result2[0].dataValues)
-
-  // console.log(await db.Chat.findAll({}))
-  // console.log(await db.JoinUser.findAll({}))
-})()
+//       

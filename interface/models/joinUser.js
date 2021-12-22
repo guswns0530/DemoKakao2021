@@ -11,7 +11,7 @@ module.exports = class JoinUser extends Sequelize.Model {
           field: 'join_id',
         },
         userId: {
-          type: Sequelize.STRING(255),
+          type: Sequelize.INTEGER,
           allowNull: false,
           field: 'user_id',
         },
